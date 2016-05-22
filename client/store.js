@@ -9,14 +9,12 @@ import comments from './data/comments';
 import posts from './data/posts';
 
 //Default data
-
 const defaultState = {
     posts,
     comments
 };
 
 const store = createStore(rootReducer, defaultState);
-const history = syncHistoryWithStore(browserHistory, store);
+export const history = syncHistoryWithStore(browserHistory, store);
 
 export default store;
-export default history;
