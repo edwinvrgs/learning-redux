@@ -17,7 +17,10 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(process.env.PORT, process.env.IP, function(err) {
+//For cloud9 use:
+//process.env.PORT and process.env.IP
+
+app.listen('7770', 'localhost', function(err) {
   if (err) {
     console.log(err);
     return;
