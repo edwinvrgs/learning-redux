@@ -25,4 +25,6 @@ app.listen('7770', 'localhost', function(err) {
     console.log(err);
     return;
   }
+
+  console.log("Servidor iniciado en: http://localhost:7770");
 });
