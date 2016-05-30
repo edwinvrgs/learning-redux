@@ -18,13 +18,19 @@ app.get('*', function(req, res) {
 });
 
 //For cloud9 use:
-//process.env.PORT and process.env.IP
+//PORT: process.env.PORT. IP: process.env.IP
 
-app.listen('7770', 'localhost', function(err) {
+//For local use:
+//PORT: 1801. IP: 'localhost'
+
+var IP = process.env.IP;
+var PORT = process.env.PORT;
+
+app.listen(PORT, IP, function(err) {
   if (err) {
     console.log(err);
     return;
   }
 
-  console.log("Servidor iniciado en: http://localhost:7770");
+  console.log("Servidor iniciado en: http://"+IP+":"+PORT);
 });
