@@ -18,13 +18,10 @@ app.get('*', function(req, res) {
 });
 
 //For cloud9 use:
-//PORT: process.env.PORT. IP: process.env.IP
+var PORT = process.env.PORT, IP = process.env.IP;
 
 //For local use:
-//PORT: 1801. IP: 'localhost'
-
-var IP = process.env.IP;
-var PORT = process.env.PORT;
+// var PORT = 1801, IP = 'localhost';
 
 app.listen(PORT, IP, function(err) {
   if (err) {
