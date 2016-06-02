@@ -1,7 +1,6 @@
 const posts = (state = [], action) => {
   switch (action.type) {
     case 'INCREMENT_LIKES':
-      console.log("Incrementando likes");
       const i = action.index;
       return [
           ...state.slice(0, i),
